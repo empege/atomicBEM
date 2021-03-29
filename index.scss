@@ -1,0 +1,14 @@
+@import './src/variables';
+
+@import './src/templatePage/templatePage.scss';
+
+@import './src/accordion/_accordion.scss';
+@import './src/accordion/_theme/_accordion--theme--primary.scss';
+@import './src/accordion/_theme/_accordion--theme--secondary.scss';
+
+@import './src/modal/_modal.scss';
+@import './src/modal/_theme/_modal--theme--default.scss';
+@import './src/modal/_theme/_modal--theme--warning.scss';
+
+@import './src/sidebar/_sidebar.scss';
+@import './src/sliderMH/sliderMH.scss';

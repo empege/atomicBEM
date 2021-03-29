@@ -1,0 +1,83 @@
+$faq-page-wrapper-width: 1000px;
+$sidebar-width: 400px;
+
+// Max break point
+$break-s: 576px;
+$break-m: 767px;
+$break-l: 992px;
+$break-xl: 1440px;
+
+// Colors
+$color-primary: #3c4053;
+$color-primary-dark: #212838;
+$color-primary-text: white;
+
+$color-secondary: white;
+$color-secondary-dark: #EFEBE9;
+$color-secondary-text: black;
+
+// General classes
+.display-none { display: none !important; }
+
+// Mixins
+@mixin displayFlex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+@mixin positionCenter($position){
+  position: $position;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin modalFixedPosition($position){
+  position: $position;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+// Media Queries
+//Ako ovde definisem media query, sta ako u samoj komponenti moram da imam vise od onih koje su ovde definisane?
+@mixin mq-phone-up { // ovo imenovanje nema smisla jos
+  @media screen and (min-width: $break-s){
+    @content;
+  }
+}
+@mixin mq-tablet-up {
+  @media screen and (min-width: $break-m){
+    @content;
+  }
+}
+@mixin mq-laptop-up {
+  @media screen and (min-width: $break-l){
+    @content;
+  }
+}
+@mixin mq-desktop-up {
+  @media screen and (min-width: $break-xl){
+    @content;
+  }
+}
+// Max width
+@mixin mq-phone-down {
+  @media screen and (max-width: $break-s){
+    @content;
+  }
+}
+@mixin mq-tablet-down {
+  @media screen and (max-width: $break-m){
+    @content;
+  }
+}
+@mixin mq-laptop-down {
+  @media screen and (max-width: $break-l){
+    @content;
+  }
+}
+@mixin mq-desktop-down {
+  @media screen and (max-width: $break-xl){
+    @content;
+  }
+}
