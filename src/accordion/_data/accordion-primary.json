@@ -1,0 +1,28 @@
+// Ovo sam samo stavio kako bi inace izgledalo, ne koristim ovaj json jer trenutno ne znam kako bih - index.js mi sluzi da renderujem sve komponente i njihovu datu, a pretpostavljam terrific direktno gadja ovaj fajl i ja samo njega treba da menjam ako treba, a ne i putanju do njega?
+{
+  "modifiers": [
+    "primary"
+  ],
+  "accordionData": [
+    {
+      "id": "0",
+      "title": "What's this all about?",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus eveniet pariatur voluptates tempora, officiis a facilis, corrupti numquam at cum temporibus beatae earum natus amet vero ratione excepturi nam?"
+    },
+    {
+      "id": "1",
+      "title": "Question 1?",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus eveniet pariatur voluptates tempora, officiis a facilis, corrupti numquam at cum temporibus beatae earum natus amet vero ratione excepturi nam?"
+    },
+    {
+      "id": "2",
+      "title": "Question 2?",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus eveniet pariatur voluptates tempora, officiis a facilis, corrupti numquam at cum temporibus beatae earum natus amet vero ratione excepturi nam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia possimus eveniet pariatur voluptates tempora, officiis a facilis, corrupti numquam at cum temporibus beatae earum natus amet vero ratione excepturi nam?"
+    },
+    {
+      "id": "3",
+      "title": "Question 3?",
+      "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+    }
+  ]
+}

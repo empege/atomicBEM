@@ -37,9 +37,11 @@ gulp.task('watch', ['browserSync', 'sassMain', 'images', 'useref'], function () 
   gulp.watch('**/*.scss', ['sassMain']);
   // Other watchers
   // Reloads the browser whenever   HTML or JS files change
-  gulp.watch('**/*.+(html|js)', ['useref']);
-  gulp.watch('**/*.html', browserSync.reload);
-  gulp.watch('**/*.js', browserSync.reload);
+  gulp.watch('./src/**/*.+(html|js)', ['useref']);
+  // Morao da dupliram watch userefa jer ne radi nesto ako sklonim ./src ovom gore, jer verovatno onda gleda i sam gulpfile i nesto nece.
+  gulp.watch('./index.js', ['useref']);
+  gulp.watch('./src/**/*.html', browserSync.reload);
+  gulp.watch('./src/**/*.js', browserSync.reload);
 })
 
 gulp.task('browserSync', function () {

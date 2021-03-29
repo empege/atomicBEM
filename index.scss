@@ -1,10 +1,10 @@
 @import './src/variables';
 
-@import './src/templatePage/templatePage.scss';
+@import './src/testPage/testPage.scss';
 
-@import './src/accordion/_accordion.scss';
-@import './src/accordion/_theme/_accordion--theme--primary.scss';
-@import './src/accordion/_theme/_accordion--theme--secondary.scss';
+@import './src/accordion/css/accordion.scss';
+@import './src/accordion/css/modifier/accordion-primary.scss';
+@import './src/accordion/css/modifier/accordion-secondary.scss';
 
 @import './src/modal/_modal.scss';
 @import './src/modal/_theme/_modal--theme--default.scss';
@@ -12,3 +12,9 @@
 
 @import './src/sidebar/_sidebar.scss';
 @import './src/sliderMH/sliderMH.scss';
+
+//Ovde je problem sto loadujem sav scss koji imam umesto samo one koji mi trebaju (npr. samo primary ili secondary temu, ne sve).
+
+* {
+  // border: 1px solid red !important;
+}

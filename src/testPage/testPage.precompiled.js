@@ -1,0 +1,6 @@
+(function() {
+  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['testPage'] = template({"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    return "<div class=\"t-test-page\">\r\n  <div class=\"t-test-page__inner\">\r\n    <h1 class=\"t-test-page__title\">Some Test Page</h1>\r\n    <h2 class=\"t-test-page__subtitle\">1. Accordion</h2>\r\n    <h3 class=\"t-test-page__subtitle\">Single Accordion - Primary Theme</h3>\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-12 my-col-1\"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <h3 class=\"t-test-page__subtitle\">Double Accordions - Secondary & Primary Theme</h3>\r\n    <div class=\"container\">\r\n      <div class=\"row\">\r\n        <div class=\"col-md-6 col-xl-9 my-col-2\"></div>\r\n        <div class=\"col-md-6 col-xl-3 my-col-3\"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <h2 class=\"t-test-page__subtitle\">2. Slider MH (Mann+Hummel)</h2>\r\n    <div class=\"t-test-page__component-wrapper--slidermh\"></div>\r\n  </div>\r\n</div>";
+},"useData":true});
+})();

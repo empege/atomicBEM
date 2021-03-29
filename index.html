@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Ovde mi je bilo lakse da sve uradim u gulpfile: da import uradim u index.scss-u i direktno to sve pretvorim u css pa uglify (cssnano) i posaljem u dist... da li to ima smisla jer ne koristim ovaj build onda? Ali onda svaka npr komponenta koju napravimo, moramo rucno da dodjemo u index.scss i da uradimo import taj njen scss. Takodje, ovaj dole link koji gleda u index.css sam zakucao, sto znaci da moram da znam napamet kako izgleda u dist folderu ta putanja... -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
@@ -13,7 +14,7 @@
   <!-- Ovi moraju da se pokrenu ovde, da li postoji mogucnost da ih stavim u isti fajl kao scripts dole ili mora ovako u dva odvojena - jedan za head jedan za body? Ako ove dole stavim u head i stavim defer, isto ne radi -->
   <!-- Da li ceo ovaj handlebars-v4 isto da stavim u ovaj bundle, valjda je bolje ako se i on minifikuje? -->
   <!--build:js main.min.handlebars-templates.js -->
-  <script src="src/templatePage/templatePage.precompiled.js"></script>
+  <script src="src/testPage/testPage.precompiled.js"></script>
   <script src="src/accordion/accordion.precompiled.js"></script>
   <script src="src/sidebar/sidebar.precompiled.js"></script>
   <script src="src/modal/modal.precompiled.js"></script>
@@ -26,7 +27,7 @@
 
   <!--build:js main.min.js -->
   <script src="index.js"></script>
-  <script src="./src/accordion/accordion.js"></script>
+  <script src="./src/accordion/js/accordion.js"></script>
   <script src="./src/sidebar/sidebar.js"></script>
   <script src="./src/modal/modal.js"></script>
   <script src="./src/slidermh/slidermh.js"></script>

@@ -1,4 +1,4 @@
-// Secondary Theme - accordion--theme--secondary
+// Secondary Theme - accordion-secondary
 
 // Color
 $color-primary: #3c4053;
@@ -9,27 +9,23 @@ $color-secondary: white;
 $color-secondary-dark: #EFEBE9;
 $color-secondary-text: black;
 
-// Da li stavljam boje direktno u samu temu, ili koristim neke defaultne varijable sa include?
-
-.accordion--theme--secondary {
+.m-accordion--secondary {
   color: $color-secondary-text;
-  .accordion__item {
+  .m-accordion__item {
     background: $color-secondary;
   }
-  .accordion__header {
-    &:hover .accordion__icon {
+  .m-accordion__header {
+    &:hover .m-accordion__icon {
       background: $color-primary;
       color: $color-secondary-dark;
       transition: .2s;
     }
   }
-  .accordion__icon--active {
+  .m-accordion__icon--active {
     background: $color-primary;
     color: $color-secondary-dark;
   }
-  .accordion__content {
-  }
-  .accordion__paragraph {
+  .m-accordion__paragraph {
     color: $color-secondary-text;
     background: $color-secondary-dark;
   }
