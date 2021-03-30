@@ -7,7 +7,7 @@ $(document).ready(function () {
       hide: '.js-sidebar-hide'
     },
     selectorsCSS: {
-      active: 'o-sidebar--active'
+      sidebarActive: 'o-sidebar--active'
     }
   };
 
@@ -19,11 +19,11 @@ $(document).ready(function () {
   sidebarShowIcon.on('click', () => showSidebar());
 
   const hideSidebar = () => {
-    sidebarElement.removeClass(sidebar.selectorsCSS.active);
+    sidebarElement.removeClass(sidebar.selectorsCSS.sidebarActive);
     sidebarShowIcon.removeClass('display-none');
   }
   const showSidebar = () => {
-    sidebarElement.addClass(sidebar.selectorsCSS.active);
+    sidebarElement.addClass(sidebar.selectorsCSS.sidebarActive);
     sidebarShowIcon.addClass('display-none');
   }
 

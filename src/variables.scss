@@ -45,7 +45,7 @@ $color-secondary-text: black;
 }
 // Media Queries
 //Ako ovde definisem media query, sta ako u samoj komponenti moram da imam vise od onih koje su ovde definisane?
-@mixin mq-phone-up { // ovo imenovanje nema smisla jos
+@mixin mq-phone-up {
   @media screen and (min-width: $break-s){
     @content;
   }
@@ -65,7 +65,7 @@ $color-secondary-text: black;
     @content;
   }
 }
-// Max width
+// Max width - Ostavio za slidermh dok ga ne preradim
 @mixin mq-phone-down {
   @media screen and (max-width: $break-s){
     @content;
