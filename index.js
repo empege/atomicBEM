@@ -79,14 +79,34 @@ const sidebarData = {
   }
 };
 const modalData = {
+  modifiers: [
+    'theme-dark', 'active-slidein'
+  ],
   title: 'Warning',
   text: 'Some text here... Some text here... Some text here... Some text here... Some text here... Some text here...',
-  themes: {
-    default: 'modal--theme--default',
-    warning: 'modal--theme--warning',
-    dark: 'modal--theme--dark',
-  }
 }
+const modalShowcaseData1 = {
+  modifiers: [
+    'theme-default', 'active-slidein'
+  ],
+  title: 'Default',
+  text: 'Some text here... Some text here... Some text here... Some text here... Some text here... Some text here...',
+}
+const modalShowcaseData2 = {
+  modifiers: [
+    'theme-dark', 'active-slidein'
+  ],
+  title: 'Dark',
+  text: 'Some text here... Some text here... Some text here... Some text here... Some text here... Some text here...',
+}
+const modalShowcaseData3 = {
+  modifiers: [
+    'theme-warning', 'active-slidein'
+  ],
+  title: 'Warning',
+  text: 'Some text here... Some text here... Some text here... Some text here... Some text here... Some text here...',
+}
+
 const sliderMHData1 = {
   data: [
     {
@@ -156,10 +176,15 @@ const renderSidebar = (rootElement) => {
   parent.innerHTML += ourGeneratedHTML;
 }
 
-const renderModal = (rootElement, data, theme = 'modal--theme--default', enterMode = 'modal--active--default') => {
+const renderModal = (rootElement, data) => {
   const template = Handlebars.templates.modal;
-  data.theme = theme;
-  data.enterMode = enterMode;
+  const ourGeneratedHTML = template(data);
+  const parent = document.querySelector(rootElement);
+  parent.innerHTML += ourGeneratedHTML;
+}
+
+const renderModalShowcase = (rootElement, data) => {
+  const template = Handlebars.templates.modalShowcase;
   const ourGeneratedHTML = template(data);
   const parent = document.querySelector(rootElement);
   parent.innerHTML += ourGeneratedHTML;
@@ -173,11 +198,14 @@ const renderSliderMH = (rootElement, data) => {
 }
 
 renderTestPage('#root');
-renderModal('.t-test-page', modalData, 'modal--theme--dark', 'modal--active--fadein');
+renderModal('.t-test-page', modalData);
 renderAccordion('.my-col-1', testPageData.accordionPrimary);
 renderAccordion('.my-col-2', testPageData.accordionSecondary);
 renderAccordion('.my-col-3', testPageData.accordionPrimary);
+renderModalShowcase('.my-col-4', modalShowcaseData1);
+renderModalShowcase('.my-col-5', modalShowcaseData2);
+renderModalShowcase('.my-col-6', modalShowcaseData3);
 renderSidebar('.t-test-page');
-renderAccordion('.sidebar', sidebarData.accordion);
-renderSliderMH('.t-test-page__component-wrapper--slidermh', sliderMHData1);
-renderSliderMH('.t-test-page__component-wrapper--slidermh', sliderMHData2);
+renderAccordion('.o-sidebar', sidebarData.accordion);
+renderSliderMH('.my-col-7', sliderMHData1);
+renderSliderMH('.my-col-8', sliderMHData2);

@@ -1,0 +1,11 @@
+.m-modal--active-slidein {
+  display: block;
+  animation: fadein .5s forwards;
+}
+.m-modal--active-slidein .m-modal__inner {
+  top: 20%;
+  animation: slidein .8s forwards;
+}
+@keyframes slidein {
+  100% {top: 50%; opacity: 1;}
+}

@@ -1,4 +1,4 @@
-.sidebar {
+.o-sidebar {
   position: fixed;
   left: -$sidebar-width;
   top: 0;
@@ -10,12 +10,12 @@
   text-align: center;
   z-index: 100;
   &--active {left: 0;}
-  &__title {
+  &__header {
     @include displayFlex(space-between, center);
-    padding: 0 20px;
+    padding: 0 1.3rem;
   }
   &__icon {
-    font-size: 1.5em;
+    font-size: 1.5rem;
     cursor: pointer;
     &--show {
       position: absolute;
@@ -23,12 +23,5 @@
       right: -40px;
       color: $color-secondary-text;
     }
-  }
-}
-
-.sidebar__accordion {
-  $accordion-content-max-height: 400px;
-  .accordion__header--active + .accordion__content {
-    max-height: $accordion-content-max-height;
   }
 }

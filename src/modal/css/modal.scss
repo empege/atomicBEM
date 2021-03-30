@@ -1,28 +1,23 @@
-// Sizes
-$vps-s: 16px;
-$vps-m: 20px;
-$vps-l: 24px;
-
 // Colors
 $color-transparent: transparent;
 $color-background: rgba(26, 26, 26, 0.8);
-// modal--theme--default
+// modal-theme--default
 $color-default-primary: whitesmoke;
 $color-default-secondary: #1a1a1a;
 $color-default-text-primary: #1a1a1a;
 $color-default-text-secondary: whitesmoke;
-// modal--theme--warning
+// modal-theme--warning
 $color-warning-primary: #F44336;
 $color-warning-secondary: whitesmoke;
 $color-warning-text-primary: whitesmoke;
 $color-warning-text-secondary: #F44336;
-// modal--theme--dark
+// modal-theme--dark
 $color-dark-primary: #1a1a1a;
 $color-dark-secondary: #F44336;
 $color-dark-text-primary: #F44336;
 $color-dark-text-secondary: whitesmoke;
 
-.modal {
+.m-modal {
   box-sizing: border-box;
   display: none;
   opacity: 0;
@@ -33,7 +28,7 @@ $color-dark-text-secondary: whitesmoke;
   }
   &__inner {
     @include positionCenter(absolute);
-    padding: $vps-l;
+    padding: 1.5rem;
     width: 90%;
     border-radius: 5px;
     border: 2px solid $color-transparent;
@@ -45,19 +40,19 @@ $color-dark-text-secondary: whitesmoke;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: $vps-l;
+    margin-bottom: 1.5rem
   }
   &__title {
-    font-size: 2em;
+    font-size: 2rem;
   }
   &__exit-button {
     background: none;
     border: none;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     cursor: pointer;
   }
   &__paragraph {
-    margin-bottom: $vps-l;
+    margin-bottom: 1.5rem;
   }
   &__footer {
     display: flex;
@@ -65,43 +60,14 @@ $color-dark-text-secondary: whitesmoke;
     align-items: center;
   }
   &__button {
-    margin: 0 5px;
+    margin: 0 0.3rem;
   }
 }
 
-// Modal Appearance Styles
-.modal--active--default {
-  opacity: 1;
-  display: block;
-}
-.modal--active--fadein {
-  display: block;
-  animation: fadein .8s forwards;
-}
-.modal--active--slidein {
-  display: block;
-  animation: fadein .5s forwards;
-}
-.modal--active--slidein .modal__inner {
-  top: 20%;
-  animation: slidein .8s forwards;
-}
-@keyframes fadein {
-  100% {opacity: 1;}
-}
-@keyframes slidein {
-  100% {top: 50%; opacity: 1;}
-}
-
-// Themes
-@import '_theme/modal--theme--default';
-@import '_theme/modal--theme--warning';
-@import '_theme/modal--theme--dark';
-
 // Should be sepparate block
 .button {
-  padding: 5px 10px;
-  font-size: $vps-m;
+  padding: 0.3rem 0.6rem;
+  font-size: 1.3rem;
   border: none;
   border-radius: 5px;
   color: $color-default-text-primary;

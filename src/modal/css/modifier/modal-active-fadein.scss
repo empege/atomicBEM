@@ -1,0 +1,7 @@
+.m-modal--active-fadein {
+  display: block;
+  animation: fadein .8s forwards;
+}
+@keyframes fadein {
+  100% {opacity: 1;}
+}

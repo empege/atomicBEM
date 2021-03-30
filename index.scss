@@ -1,20 +1,31 @@
-@import './src/variables';
+@import './src/variables.scss';
 
-@import './src/testPage/testPage.scss';
+// Test Page Styles
+@import './src/testPage/css/testPage.scss';
 
+// Accordion Styles
 @import './src/accordion/css/accordion.scss';
 @import './src/accordion/css/modifier/accordion-primary.scss';
 @import './src/accordion/css/modifier/accordion-secondary.scss';
 
-@import './src/modal/_modal.scss';
-@import './src/modal/_theme/_modal--theme--default.scss';
-@import './src/modal/_theme/_modal--theme--warning.scss';
+// Modal Styles
+@import './src/modal/css/modal.scss';
+@import './src/modal/css/modifier/modal-theme-default.scss';
+@import './src/modal/css/modifier/modal-theme-warning.scss';
+@import './src/modal/css/modifier/modal-theme-dark.scss';
+//Modal Appearance Styles
+@import './src/modal/css/modifier/modal-active-default.scss';
+@import './src/modal/css/modifier/modal-active-fadein.scss';
+@import './src/modal/css/modifier/modal-active-slidein.scss';
 
-@import './src/sidebar/_sidebar.scss';
+// Sidebar Styles
+@import './src/sidebar/css/sidebar.scss';
+
+// Slider MH Styles
 @import './src/sliderMH/sliderMH.scss';
 
 //Ovde je problem sto loadujem sav scss koji imam umesto samo one koji mi trebaju (npr. samo primary ili secondary temu, ne sve).
 
-* {
-  // border: 1px solid red !important;
-}
+// * {
+//   // border: 1px solid red !important;
+// }

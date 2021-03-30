@@ -1,6 +1,6 @@
-<div class="m-modal{{#each modifiers}} m-modal--{{this}}{{/each}} js-modal">
-  <div class="m-modal__background js-modal-background"></div>
-  <div class="m-modal__inner">
+{{!-- Logika Modala mi nije dobra bas ja mislim, pa sam ovde samo izdvojio da moze da se prikaze izgleda tema --}}
+<div style="opacity:1;display:block;position:relative;" class="m-modal {{#each modifiers}} m-modal--{{this}}{{/each}}  js-modal">
+  <div style="position: static; transform: none;" class="m-modal__inner">
     <header class="m-modal__header">
       <h1 class="m-modal__title">{{title}}</h1>
       <button class="m-modal__exit-button js-modal-exit-btn"><i class="fas fa-times"></i>
@@ -8,7 +8,6 @@
     </header>
     <div class="m-modal__paragraph">{{text}}</div>
     <footer class="m-modal__footer">
-      {{!-- Nemam ovde button kao komponentu pa za sada neka ostane ovakvo imenovanje. Kad bih je imao kao komponentu, trebalo bi da ovo m-modal__button bude neki modifier npr. button--modal-default? --}}
       <button class="button m-modal__button">Accept</button>
       <button class="button m-modal__button">Decline</button>
     </footer>
