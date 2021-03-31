@@ -4,7 +4,7 @@ $main-color: #4a4a4a;
 $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad delim variablu, ne 100% / 2 npr.
 
 // Slider MH
-.slider {
+.m-slider {
   text-align: left;
   font-family: 'Shippori Mincho', serif;
   width: $sliderMH-width-full;
@@ -56,7 +56,7 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
       min-width: $sliderMH-width-full / 2;
     }
   }
-  &__slide:not(.slider__slide--current){
+  &__slide:not(.m-slider__slide--current){
     cursor: default;
   }
   &__content {
@@ -93,17 +93,17 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
     padding-top: 3.1rem;
     z-index: 2;
     cursor: pointer;
-    .slider__content {
+    .m-slider__content {
       visibility: visible;
       opacity: 1;
       transition: all 0.4s;
     }
-    &:hover .slider__image {
+    &:hover .m-slider__image {
       transition: none;
       transform: none;
     }
     @include mq-tablet-up {
-      &:hover .slider__image {
+      &:hover .m-slider__image {
         transition: .3s;
         transform: scale(1.2);
       }

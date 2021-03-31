@@ -10,11 +10,11 @@ const sliderMH = {
     currentSlide: 'js-current-slide',
   },
   selectorsCSS: {
-    slider: 'slider',
-    slide: 'slider__slide',
-    sliderInner: 'slider__inner',
-    currentSlide: 'slider__slide--current',
-    sliderContent: 'slider__content'
+    slider: 'm-slider',
+    slide: 'm-slider__slide',
+    sliderInner: 'm-slider__inner',
+    currentSlide: 'm-slider__slide--current',
+    sliderContent: 'm-slider__content'
   }
 }
 
