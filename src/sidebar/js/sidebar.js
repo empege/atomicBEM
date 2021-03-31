@@ -8,6 +8,9 @@ $(document).ready(function () {
     },
     selectorsCSS: {
       sidebarActive: 'o-sidebar--active'
+    },
+    generalClasses: {
+      displayNone: 'display-none'
     }
   };
 
@@ -20,11 +23,11 @@ $(document).ready(function () {
 
   const hideSidebar = () => {
     sidebarElement.removeClass(sidebar.selectorsCSS.sidebarActive);
-    sidebarShowIcon.removeClass('display-none');
+    sidebarShowIcon.removeClass(sidebar.generalClasses.displayNone);
   }
   const showSidebar = () => {
     sidebarElement.addClass(sidebar.selectorsCSS.sidebarActive);
-    sidebarShowIcon.addClass('display-none');
+    sidebarShowIcon.addClass(sidebar.generalClasses.displayNone);
   }
 
 });
