@@ -10,6 +10,11 @@ $(function () {
     },
     selectorsCSS: {
       headerActive: 'm-accordion__header--active',
+      iconActive: 'm-accordion__item--active'
+    },
+    // Da li je ovako nesto uopste potrebno?
+    generalClasses: {
+      displayNone: 'display-none'
     }
   };
 
@@ -31,7 +36,7 @@ $(function () {
     const paragraph = content.find(accordion.selectors.paragraph);
     const paragraphHeight = paragraph.outerHeight(true);
     const icons = article.find(accordion.selectors.icon);
-    icons.toggleClass('display-none');
+    icons.toggleClass(accordion.generalClasses.displayNone);
     if (header.hasClass(accordion.selectorsCSS.headerActive)) {
       header.removeClass(accordion.selectorsCSS.headerActive);
       content.css('maxHeight', '0');
