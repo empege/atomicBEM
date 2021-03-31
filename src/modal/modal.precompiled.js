@@ -17,6 +17,6 @@ templates['modal'] = template({"1":function(container,depth0,helpers,partials,da
     + alias4(((helper = (helper = lookupProperty(helpers,"title") || (depth0 != null ? lookupProperty(depth0,"title") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data,"loc":{"start":{"line":5,"column":33},"end":{"line":5,"column":42}}}) : helper)))
     + "</h1>\n      <button class=\"m-modal__exit-button js-modal-exit-btn\"><i class=\"fas fa-times\"></i>\n      </button>\n    </header>\n    <div class=\"m-modal__paragraph\">"
     + alias4(((helper = (helper = lookupProperty(helpers,"text") || (depth0 != null ? lookupProperty(depth0,"text") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data,"loc":{"start":{"line":9,"column":36},"end":{"line":9,"column":44}}}) : helper)))
-    + "</div>\n    <footer class=\"m-modal__footer\">\n      <button class=\"button m-modal__button\">Accept</button>\n      <button class=\"button m-modal__button\">Decline</button>\n    </footer>\n  </div>\n</div>";
+    + "</div>\n    <footer class=\"m-modal__footer\">\n      <button class=\"a-button m-modal__button\">Accept</button>\n      <button class=\"a-button m-modal__button\">Decline</button>\n    </footer>\n  </div>\n</div>";
 },"useData":true});
 })();

@@ -14,27 +14,21 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
   overflow-x: hidden;
   overflow-y: visible;
   touch-action: none;
-  @include mq-tablet-down {
-    width: $sliderMH-width-full;
-    &:hover .slider__image {
-      transition: none;
-      transform: none;
-    }
-  }
   & a { //Zeza text decoration pa mora ovako
     text-decoration: none;
     color: $main-color;
   }
   &__arrow {
+    display: none;
     position: absolute;
-    top: 450px;
+    top: 70%;
     background: none;
     border: none;
     outline: none;
     z-index: 5;
     cursor: pointer;
-    @include mq-tablet-down {
-      display: none;
+    @include mq-tablet-up {
+      display: block;
     }
   }
   &__arrow--left {
@@ -50,7 +44,7 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
     position: relative;
   }
   &__slide {
-    min-width: $sliderMH-width-full / 2;
+    min-width: $sliderMH-width-full / 1.25;
     height: 100%;
     position: relative;
     transition: 0.4s;
@@ -58,8 +52,8 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
     &:hover .read-more {
       text-decoration: underline;
     }
-    @include mq-tablet-down {
-      min-width: $sliderMH-width-full / 1.25;
+    @include mq-tablet-up {
+      min-width: $sliderMH-width-full / 2;
     }
   }
   &__slide:not(.slider__slide--current){
@@ -68,14 +62,14 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
   &__content {
     visibility: none;
     opacity: 0;
-    margin-top: 2.5rem;
+    margin-top: 1.3rem;
+    margin-left: -1.3rem;
+    margin-right: -1.3rem;
     transition: all 0.4s;
-    @include mq-tablet-down {
-      visibility: none;
-      opacity: 0;
-      margin-top: 1.3rem;
-      margin-left: -1.3rem;
-      margin-right: -1.3rem;
+    @include mq-tablet-up {
+      margin-top: 2.5rem;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   &__title {
@@ -83,10 +77,10 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
   }
   &__description {
     font-size: 1rem;
-    margin: 1.8rem 0 0;
+    margin: 20px 0 0;
     line-height: 1.5rem;
-    @include mq-tablet-down {
-      margin: 20px 0 0;
+    @include mq-tablet-up {
+      margin: 1.8rem 0 0;
     }
   }
   &__action-btn {
@@ -105,8 +99,14 @@ $sliderMH-width-full: 100%; // iz nekog razloga deljenje sa % radi samo kad deli
       transition: all 0.4s;
     }
     &:hover .slider__image {
-      transition: .3s;
-      transform: scale(1.2);
+      transition: none;
+      transform: none;
+    }
+    @include mq-tablet-up {
+      &:hover .slider__image {
+        transition: .3s;
+        transform: scale(1.2);
+      }
     }
   }
   &__image {

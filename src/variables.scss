@@ -65,24 +65,3 @@ $color-secondary-text: black;
     @content;
   }
 }
-// Max width - Ostavio za slidermh dok ga ne preradim
-@mixin mq-phone-down {
-  @media screen and (max-width: $break-s){
-    @content;
-  }
-}
-@mixin mq-tablet-down {
-  @media screen and (max-width: $break-m){
-    @content;
-  }
-}
-@mixin mq-laptop-down {
-  @media screen and (max-width: $break-l){
-    @content;
-  }
-}
-@mixin mq-desktop-down {
-  @media screen and (max-width: $break-xl){
-    @content;
-  }
-}

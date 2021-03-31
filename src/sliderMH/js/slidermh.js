@@ -1,5 +1,3 @@
-
-
 /* SELECTORS */
 const sliderMH = {
   selectors: {
@@ -26,9 +24,6 @@ allSliders.forEach((currentSlider, id) => {
   // Kako znaju svi ovi dole da menjaju bas taj diffx npr kad je let i kad ga i jedno i drugo menjaju? Kako js pamti razlicitosti iz ove dve anonimne funkcije? Bas zanimljivo, i korisno.
 
   /* ELEMENTS */
-  // const sliderTemp = {};
-  // sliderTemp[id] = currentSlider;
-  // const slider = sliderTemp[id];
   const slider = currentSlider;
   const sliderInner = slider.querySelector(`.${sliderMH.selectors.sliderInner}`);
   const slides = slider.querySelectorAll(`.${sliderMH.selectors.slide}`);
