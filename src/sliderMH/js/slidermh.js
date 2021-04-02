@@ -1,6 +1,7 @@
 $(function () {
 
   /* SELECTORS */
+  // find trazi '.', dok hasClass npr. ne sme da je ima jer gleda '.' kao deo imena
   let sliderMH = {
     selectors: {
       slider: '.js-slider',
@@ -20,17 +21,17 @@ $(function () {
     }
   }
 
-  let allSliders = $(sliderMH.selectors.slider);
+  const allSliders = $(sliderMH.selectors.slider);
 
   allSliders.each(function (id, currentSlider) {
 
     /* ELEMENTS */
-    let slider = $(currentSlider);
-    let sliderInner = slider.find(sliderMH.selectors.sliderInner);
-    let slides = slider.find(sliderMH.selectors.slide);
-    let slide = slider.find(sliderMH.selectors.slide);
-    let arrowLeft = slider.find(sliderMH.selectors.arrowLeft);
-    let arrowRight = slider.find(sliderMH.selectors.arrowRight);
+    const slider = $(currentSlider);
+    const sliderInner = slider.find(sliderMH.selectors.sliderInner);
+    const slides = slider.find(sliderMH.selectors.slide);
+    const slide = slider.find(sliderMH.selectors.slide);
+    const arrowLeft = slider.find(sliderMH.selectors.arrowLeft);
+    const arrowRight = slider.find(sliderMH.selectors.arrowRight);
 
     // Event Listeners
     if (window.PointerEvent) {
@@ -60,8 +61,8 @@ $(function () {
     let slideWidth = slide.outerWidth();
     let translateDivisionAmount;
     // As there are copies of all slides to the left and right, we divide number of all by 3, and the middle ones are the ones we are going to see. We get startIndex as below:
-    let startIndex = slides.length / 3;
-    let lastIndex = startIndex + startIndex - 1;
+    const startIndex = slides.length / 3;
+    const lastIndex = startIndex + startIndex - 1;
     let index = startIndex;
     let isSliding = false; //Slide sliding
     let isMoving = false; //Mouse moving
@@ -74,7 +75,7 @@ $(function () {
       checkWindowSize();
       loadSlides();
     });
-    let checkWindowSize = () => {
+    function checkWindowSize() {
       // Na 767 i 768 ne radi kad se bas resize...
       if ($(window).width() <= 767) {
         translateDivisionAmount = 8;
@@ -134,11 +135,14 @@ $(function () {
 
     // Check slider index - rearange translateX if index is below start or above last
     function checkSlideIndex(e) {
+      // if (e.originalEvent.srcElement.className.includes('js-slider-inner')) {
+      // if ($(e.target).hasClass('js-slider-inner')) {
+      //Ovaj .is je mnogo sporiji, ali radi kad u selectoru gore imam tacku
       //Jel ovo mesanje jsa i jquery??
       if (e.originalEvent.propertyName !== 'transform') {
         return;
       }
-      if ($(e.target).hasClass('js-slider-inner')) {
+      if ($(e.target).is(sliderMH.selectors.sliderInner)) {
         if (index < startIndex) {
           sliderInner.css('transition', 'none');
           index = lastIndex;
@@ -158,8 +162,7 @@ $(function () {
       if (e.originalEvent.propertyName !== 'transform') {
         return;
       }
-      // if (e.originalEvent.srcElement.className.includes('js-slider-inner')) {
-      if ($(e.target).hasClass('js-slider-inner')) {
+      if ($(e.target).is(sliderMH.selectors.sliderInner)) {
         if (index < startIndex) {
           slides.eq(lastIndex).addClass([sliderMH.selectors.currentSlide, sliderMH.selectorsCSS.currentSlide])
         } else if (index > lastIndex) {
