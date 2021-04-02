@@ -198,7 +198,7 @@ const renderSliderMH = (rootElement, data) => {
 }
 
 renderTestPage('#root');
-renderModal('.t-test-page', modalData);
+// renderModal('.t-test-page', modalData);
 renderAccordion('.my-col-1', testPageData.accordionPrimary);
 renderAccordion('.my-col-2', testPageData.accordionSecondary);
 renderAccordion('.my-col-3', testPageData.accordionPrimary);
