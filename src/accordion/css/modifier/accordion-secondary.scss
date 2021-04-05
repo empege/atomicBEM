@@ -9,12 +9,11 @@
     &:hover .m-accordion__icon {
       background: $color-primary;
       color: $color-secondary-dark;
-      transition: .2s;
     }
   }
-  .m-accordion__icon--active {
-    background: $color-primary;
-    color: $color-secondary-dark;
+  .m-accordion__icon {
+    background: $color-secondary;
+    color: $color-primary-dark;
   }
   .m-accordion__paragraph {
     color: $color-secondary-text;

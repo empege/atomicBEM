@@ -8,9 +8,6 @@
     @include displayFlex(space-between, center);
     padding: 0 1.2rem;
     cursor: pointer;
-    &:hover .a-accordion__icon {
-      transition: .2s;
-    }
   }
   &__title {
     font-weight: normal;
@@ -23,9 +20,10 @@
     border-radius: 50%;
     font-size: 1.5rem;
     font-weight: bold;
-    @include displayFlex(center, center);
+    display: none;
   }
   &__icon--active {
+    @include displayFlex(center, center);
     transition: .2s;
   }
   &__content {
